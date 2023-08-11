@@ -40,7 +40,7 @@ const submitForm = async (req, res) => {
   try {
     await sendEmail(name, email, phone, message);
     return res
-      .status(201)
+      .status(200)
       .json({ message: "Thanks for contacting us!", data: req.body });
   } catch (error) {
     return res.status(500).json({
