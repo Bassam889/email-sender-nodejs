@@ -44,8 +44,8 @@ const submitForm = async (req, res) => {
       .json({ message: "Thanks for contacting us!", data: req.body });
   } catch (error) {
     return res.status(500).json({
-      error: "An error occured while sending the email.",
-      details: `${error.message}`,
+      message: "An error occured while sending the email.",
+      error: `${error.message}`,
     });
   }
 };
